@@ -5,38 +5,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather App</title>
     <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <title>Weather App</title>
 </head>
 
 <body>
-    <div class="wrapper">
-        <header><i class='bx bx-left-arrow-alt'></i>Weather App</header>
+    <div class="container">
+        <header><i class='bx bx-left-arrow-alt'></i></i>Weather App</header>
         <section class="input-part">
-            <p class="info-txt"></p>
-            <div class="content">
-                <input type="text" spellcheck="false" placeholder="Enter city name" required>
-                <div class="separator"></div>
-                <button>Get Device Location</button>
-            </div>
+            <p class="info-text">Please enter a valid city name</p>
+            <div class="input"><input type="text" name="inputText" id="inputText" placeholder="Enter Name City"
+                    spellcheck="false" required></div>
+            <div class="separator"></div>
+            <button>Get Device Location</button>
         </section>
         <section class="weather-part">
-            <img src="" alt="Weather Icon">
+            <img src="images/icons/animated/cloudy-day-3.svg" alt="Weather icon">
             <div class="temp">
-                <span class="numb">_</span>
+                <span class="numb">13</span>
                 <span class="deg">°</span>C
             </div>
-            <div class="weather">_ _</div>
+            <div class="weather">Sunny</div>
             <div class="location">
                 <i class='bx bx-map'></i>
-                <span>_, _</span>
+                <span>Palhoça, Brazil</span>
             </div>
             <div class="bottom-details">
                 <div class="column feels">
                     <i class='bx bxs-thermometer'></i>
                     <div class="details">
                         <div class="temp">
-                            <span class="numb-2">_</span>
+                            <span class="numb">17</span>
                             <span class="deg">°</span>C
                         </div>
                         <p>Feels like</p>
@@ -45,14 +45,14 @@
                 <div class="column humidity">
                     <i class='bx bxs-droplet-half'></i>
                     <div class="details">
-                        <span>_</span>
+                        <span class="numb">84%</span>
                         <p>Humidity</p>
                     </div>
                 </div>
             </div>
         </section>
     </div>
-    <script src="ambient.js"></script>
+    <script src="index.js"></script>
 </body>
 
 </html>
