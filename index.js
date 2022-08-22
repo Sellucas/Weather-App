@@ -52,12 +52,11 @@ function weatherDetails(info) {
         infoText.innerText = `${inputField.value} isn't a valid city name`;
         infoText.classList.replace('pending', 'error');
     } else {
-
         // Getting required properties value from the info object
-        const city = info.name;
-        const country = info.sys.country;
-        const { description, id } = info.weather[0];
-        const { feels_like, humidity, temp } = info.main;
+        const city = info.name,
+            country = info.sys.country,
+            { description, id } = info.weather[0],
+            { feels_like, humidity, temp } = info.main;
 
         // Using weather icons acording to the id which API return
         if (id == 800) {
@@ -85,7 +84,7 @@ function weatherDetails(info) {
         container.classList.add('active');
         console.log(info);
     }
-}
+};
 
 arrowBack.addEventListener('click', () => {
     container.classList.remove('active');

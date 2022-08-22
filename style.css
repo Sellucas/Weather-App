@@ -1,6 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 /* font-family: 'Poppins', sans-serif; */
 
+:root {
+    --blueCyan: #43AFFC;
+    --grayDetails: #bfbfbf;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -35,17 +40,17 @@ body {
 .container {
     width: 400px;
     border-radius: 10px;
-    background-color: white;
+    background: white;
 }
 
 .container header {
     display: flex;
     align-items: center;
     font-size: 24px;
-    color: #43AFFC;
+    color: var(--blueCyan);
     font-weight: 600;
     padding: 16px 15px;
-    border-bottom: 1px solid #bfbfbf;
+    border-bottom: 1px solid var(--grayDetails);
 }
 
 header i {
@@ -65,6 +70,10 @@ header i {
 
 .container.active .input-part {
     display: none;
+}
+
+.input-part .input {
+    margin: 30px 0;
 }
 
 .input-part .info-text {
@@ -101,18 +110,18 @@ header i {
 
 .input-part input {
     text-align: center;
-    border: 1px solid #bfbfbf;
+    border: 1px solid var(--grayDetails);
 }
 
 .input-part input:is(:focus, :valid) {
-    border: 2px solid #43AFFC;
+    border: 2px solid var(--blueCyan);
 }
 
 .input-part .separator {
     height: 1px;
     width: 100%;
     margin: 25px 0;
-    background-color: #bfbfbf;
+    background-color: var(--grayDetails);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -120,7 +129,7 @@ header i {
 
 .separator::before {
     content: "or";
-    color: #bfbfbf;
+    color: var(--grayDetails);
     font-size: 19px;
     padding: 0 15px;
     background: white;
@@ -129,7 +138,7 @@ header i {
 .input-part button {
     color: white;
     cursor: pointer;
-    background-color: #43AFFC;
+    background-color: var(--blueCyan);
 }
 
 .container .weather-part {
@@ -186,7 +195,7 @@ header i {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-top: 1px solid #bfbfbf;
+    border-top: 1px solid var(--grayDetails);
 }
 
 .bottom-details .column {
@@ -198,12 +207,12 @@ header i {
 }
 
 .column i {
-    color: #43AFFC;
+    color: var(--blueCyan);
     font-size: 40px;
 }
 
 .column.humidity {
-    border-left: 1px solid #bfbfbf;
+    border-left: 1px solid var(--grayDetails);
 }
 
 .details .temp,
