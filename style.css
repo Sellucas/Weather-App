@@ -254,6 +254,8 @@ a {
 
 @media only screen and (max-width: 768px) {
     .developed {
-        display: none;
+        transform: rotate(270deg);
+        right: -50px;
+        bottom: 30%;
     }
 }
