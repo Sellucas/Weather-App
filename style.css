@@ -232,3 +232,28 @@ header i {
     font-size: 14px;
     margin-top: -6px;
 }
+
+/* Credits */
+
+.developed {
+    display: block;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    color: var(--grayDetails);
+    font-size: 14px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 768px) {
+    .developed {
+        display: none;
+    }
+}
