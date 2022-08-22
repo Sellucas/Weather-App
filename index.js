@@ -16,7 +16,7 @@ inputField.addEventListener("keyup", e => {
 });
 
 locationBtn.addEventListener("click", () => {
-    if (navigator.geolocation) { //if browser support geolocation API
+    if (navigator.geolocation) { //if browser supports geolocation API
         navigator.geolocation.getCurrentPosition(onSucess, onError);
     } else {
         alert('Your browser not support geolocation API');
@@ -24,7 +24,7 @@ locationBtn.addEventListener("click", () => {
 });
 
 function onSucess(position) {
-    const { latitude, longitude } = position.coords; // getting latitude and longitude of the user
+    const { latitude, longitude } = position.coords; // getting latitude and longitude from user
     api = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&units=metric&appid=2c8ae0e4d681e5776f924bea40f17466`
     fetchData();
 };
@@ -42,8 +42,8 @@ function requestApi(city) {
 function fetchData() {
     infoText.innerText = "Getting weather details ...";
     infoText.classList.add('pending');
-    // getting API response and returning it with parsing into JS object
-    // weatherDetails function with passing API result as an argument
+    // Getting API response and returning it with parsing into JS object
+    // WeatherDetails function with passing API result as argument
     fetch(api).then(response => response.json()).then(result => weatherDetails(result));
 }
 
@@ -52,13 +52,13 @@ function weatherDetails(info) {
         infoText.innerText = `${inputField.value} isn't a valid city name`;
         infoText.classList.replace('pending', 'error');
     } else {
-        // Getting required properties value from the info object
+        // Getting the value of required properties from info object
         const city = info.name,
             country = info.sys.country,
             { description, id } = info.weather[0],
             { feels_like, humidity, temp } = info.main;
 
-        // Using weather icons acording to the id which API return
+        // Using weather icons according to the id that the API return
         if (id == 800) {
             weatherIcon.src = "images/day.svg"
         } else if (id >= 200 && id <= 232) {
