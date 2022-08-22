@@ -10,7 +10,7 @@ Weather App is a web application that shows the current wheather conditions of a
 
 This project was developed with:
 
-- • HTML5
-- • CSS3
-- • Vanilla Javascript
-- • Open Weather API
+- HTML5
+- CSS3
+- Vanilla Javascript
+- Open Weather API
