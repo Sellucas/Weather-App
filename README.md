@@ -6,7 +6,7 @@
  
 Weather App is a web application that shows the current wheather conditions of any city around the world, it also get your current location by clicking "Get Device Location" button. This app can collect data like temperature in celsius, weather conditions, location, humidity and feels like.
 
-To acess the App [click here](https://sellucas.github.io/Weather-App/)
+To access the App [click here](https://sellucas.github.io/Weather-App/)
 
 # Technologies
 
